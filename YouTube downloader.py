@@ -49,7 +49,7 @@ def download(format, playlist):
                     case "audio":
                         command += " --yes-playlist --audio-format mp3 -x -P \"{0}\\downloaded\\Audio\" \"{1}\"".format(os.getcwd(), vid)
             if platform.system() == "Linux":
-                command.replace("\\", "/")
+                command = command.replace("\\", "/")
             os.system(command)
             
         else:
